@@ -132,3 +132,11 @@
 body{
   background-color: #031b07;
 }
+/* .hero-title {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: clamp(4rem, 10vw, 9rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+} */

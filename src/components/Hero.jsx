@@ -16,7 +16,7 @@ const Hero = () => {
         />
 
         <div className="relative px-6 md:px-15 text-center md:text-start space-y-10 z-10">
-            <h1 className="text-center text-3xl md:text-7xl text-white font-bold tracking-wider mt-4">
+            <h1 className="text-center hero-title text-3xl md:text-7xl text-white font-bold tracking-wider mt-4">
               <span className="text-green-900">DRIVE</span> YOUR <span className="text-lime-300">WAY</span>
             </h1>
 
