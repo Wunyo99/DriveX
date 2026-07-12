@@ -4,6 +4,8 @@ import { ArrowUpRight } from "lucide-react";
 import Brands from "../components/Brands";
 import { ThreeDPhotoCarousel } from "../components/ui/ThreeDCarousel";
 import WhyChooseUs from "../components/WhyChooseUs";
+import Services from "../components/Services";
+import Testimonials from "../components/Testimonials";
 const Home = () => {
 
 
@@ -98,6 +100,12 @@ const Home = () => {
       {/* <section>
       </section> */}
       <WhyChooseUs/>
+      <Services/>
+      <section className="flex flex-col items-center justify-center py-20 px-10">
+
+      <Testimonials/>
+
+      </section>
 
     </>
   );
