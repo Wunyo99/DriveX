@@ -17,7 +17,7 @@ export function Footer({ className, ...props }) {
     >
       <div className="fixed bottom-0 h-180 w-full">
         <div className="sticky top-[calc(100vh-720px)] h-full overflow-y-auto">
-          <div className="relative flex min-h-full flex-col justify-center gap-10 border-t px-4 py-8 md:px-12">
+          <div className="relative flex min-h-full flex-col justify-end gap-10 border-t px-4 py-8 md:px-12">
             {" "}
             <div
               aria-hidden
@@ -34,7 +34,9 @@ export function Footer({ className, ...props }) {
               <AnimatedContainer className="w-full max-w-sm min-w-2xs space-y-4">
                 <div className="flex items-center gap-2">
                   <CarFront className="size-8 text-lime-300" />
-                  <h4 className="text-2xl text-green-900 font-semibold">Drive<span className="text-lime-300">X</span></h4>
+                  <h4 className="text-2xl text-green-900 font-semibold">
+                    Drive<span className="text-lime-300">X</span>
+                  </h4>
                 </div>
 
                 <p className="text-gray-400 mt-8 text-sm md:mt-0">

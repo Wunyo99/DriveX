@@ -10,7 +10,7 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-
+import logo from "../assets/logo.png";
 const navLinks = [
   {
     name: "Home",
@@ -39,7 +39,11 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 bg-green- backdrop-blur">
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <div className="flex items-center gap-2">
-          <CarFront className="text-lime-300" size={35}/>
+          {/* <CarFront className="text-lime-300" size={35}/> */}
+          <div className="rounded-full overflow-hidden p-1">
+            {" "}
+            <img src={logo} alt="" className="w-12" />
+          </div>
           <Link
             to="/"
             className="text-2xl md:text-4xl font-bold tracking-tight text-green-900"
