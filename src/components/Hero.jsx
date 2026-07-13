@@ -16,11 +16,23 @@ const Hero = () => {
         />
 
         <div className="relative px-6 md:px-15 text-center md:text-start space-y-10 z-10">
-            <h1 className="text-center hero-title text-3xl md:text-7xl text-white font-bold tracking-wider mt-4">
-              <span className="text-green-900">DRIVE</span> YOUR <span className="text-lime-300">WAY</span>
-            </h1>
+          <motion.h1
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-center hero-title text-3xl md:text-7xl text-white font-bold tracking-wider mt-4"
+          >
+            <span className="text-green-900">DRIVE</span> YOUR{" "}
+            <span className="text-lime-300">WAY</span>
+          </motion.h1>
 
-          <div className="space-y-5 lg:mt-82 max-w-lg">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="space-y-5 lg:mt-82 max-w-lg"
+          >
             <p className="text-white/90 font-medium text-xl">
               EXPLORE. BOOK. DRIVE
             </p>
@@ -37,7 +49,7 @@ const Hero = () => {
                 </div>
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </>

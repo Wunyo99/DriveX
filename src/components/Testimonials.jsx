@@ -1,6 +1,5 @@
 import CircularTestimonials from "./ui/CircularTestimonials";
-import React from "react";
-
+import { motion } from "framer-motion";
 const Testimonials = () => {
   const testimonials = [
     {
@@ -27,11 +26,16 @@ const Testimonials = () => {
   ];
   return (
     <>
-      <div className="mb-8">
+      <motion.div
+                initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+      className="mb-8">
         <h1 className="capitalize text-center text-4xl font-medium text-white">
           What our <span className="text-lime-300">customers</span> say
         </h1>
-      </div>
+      </motion.div>
       <CircularTestimonials
         testimonials={testimonials}
         colors={{

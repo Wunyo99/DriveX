@@ -6,9 +6,8 @@ import { ThreeDPhotoCarousel } from "../components/ui/ThreeDCarousel";
 import WhyChooseUs from "../components/WhyChooseUs";
 import Services from "../components/Services";
 import Testimonials from "../components/Testimonials";
+import { motion } from "framer-motion";
 const Home = () => {
-
-
   const carTypes = [
     {
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNwu1Krkqh8KAYNSeVOH25_0WmuXCVNVeHw1LXxVx3qg&s=10",
@@ -33,17 +32,34 @@ const Home = () => {
     <>
       <Hero />
 
-      <section className="bg-green-950">
-        <Brands />
+      <section>
+        <h1 className="text-center text-4xl mb-5 text-white font-bold">
+          Trusted <span className="text-lime-300">Brands</span>
+        </h1>
+        <div className="bg-green-950">
+          <Brands />
+        </div>
       </section>
 
       <section className="px-10 py-10">
         <div className="flex flex-col md:flex-row gap-2 items-center justify-between">
-          <h1 className="text-4xl max-w-sm text-center md:text-start text-white font-medium">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-4xl max-w-sm text-center md:text-start text-white font-medium"
+          >
             Find and Book Your{" "}
             <span className="text-lime-300">Perfect Ride</span>
-          </h1>
-          <div className="flex flex-col lg:items-end items-center justify-end">
+          </motion.h1>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col lg:items-end items-center justify-end"
+          >
             <p className="lg:w-100 text-center lg:text-end text-white">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
               aut tempore sapiente nemo sunt vitae earum fuga reprehenderit
@@ -55,10 +71,16 @@ const Home = () => {
               </span>
               <ArrowUpRight size={18} className="text-lime-400" />
             </Link>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 py-5 lg:grid-cols-3 px- gap-7">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="grid grid-cols-1 md:grid-cols-2 py-5 lg:grid-cols-3 px- gap-7"
+        >
           {carTypes.map((carType, index) => (
             <div key={index} className="borde rounded-4xl overflow-hidden">
               <div className="w-full h- overflow-hidden">
@@ -86,27 +108,25 @@ const Home = () => {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </section>
-
 
       <section className="py-10">
         <div>
-          <h1 className="text-6xl text-green-800 font-bold text-center">Trending <span className="text-lime-300">Cars</span></h1>
+          <h1 className="text-6xl text-green-800 font-bold text-center">
+            Trending <span className="text-lime-300">Cars</span>
+          </h1>
         </div>
         <ThreeDPhotoCarousel />
       </section>
 
       {/* <section>
       </section> */}
-      <WhyChooseUs/>
-      <Services/>
+      <WhyChooseUs />
+      <Services />
       <section className="flex flex-col items-center justify-center py-20 px-10">
-
-      <Testimonials/>
-
+        <Testimonials />
       </section>
-
     </>
   );
 };
