@@ -1,7 +1,7 @@
 "use client";
 
 import { Link, NavLink } from "react-router-dom";
-import { Menu } from "lucide-react";
+import { CarFront, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -38,15 +38,15 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 bg-green- backdrop-blur">
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
-        {/* Logo */}
-        <Link
-          to="/"
-          className="text-2xl md:text-4xl font-bold tracking-tight text-green-900"
-        >
-          Drive<span className="text-lime-300">X</span>
-        </Link>
-
-        {/* Desktop Navigation */}
+        <div className="flex items-center gap-2">
+          <CarFront className="text-lime-300" size={35}/>
+          <Link
+            to="/"
+            className="text-2xl md:text-4xl font-bold tracking-tight text-green-900"
+          >
+            Drive<span className="text-lime-300">X</span>
+          </Link>
+        </div>
         <NavigationMenu className="hidden lg:flex">
           <NavigationMenuList className="gap-2">
             {navLinks.map((link) => (
@@ -70,7 +70,6 @@ const Navbar = () => {
           </NavigationMenuList>
         </NavigationMenu>
 
-        {/* Desktop Buttons */}
         <div className="hidden items-center gap-3 lg:flex">
           <Link className="bg-lime-300 py-1 px-4 rounded-md font-medium text-gray-800">
             Login
@@ -81,11 +80,10 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Mobile Menu */}
         <div className="lg:hidden">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="default" size="lg">
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
@@ -97,8 +95,8 @@ const Navbar = () => {
                     key={link.name}
                     to={link.path}
                     className={({ isActive }) =>
-                      `rounded-md px-4 py-3 text-base font-medium transition ${
-                        isActive ? "bg-black text-white" : "hover:bg-gray-100"
+                      `rounded-md px-4 py-3 text-lime-300 font-medium transition ${
+                        isActive ? "bg-black text-white" : "hover:bg-black"
                       }`
                     }
                   >
@@ -106,10 +104,14 @@ const Navbar = () => {
                   </NavLink>
                 ))}
 
-                <div className="mt-6 flex flex-col gap-3">
-                  <Button variant="outline">Login</Button>
+                <div className=" items-center gap-3 flex">
+                  <Link className="bg-lime-300 py-2 px-4 rounded-md font-medium text-gray-800">
+                    Login
+                  </Link>
 
-                  <Button>Sign Up</Button>
+                  <Link className="bg-lime-300 py-2 px-4 rounded-md font-medium text-gray-800">
+                    Sign Up
+                  </Link>
                 </div>
               </div>
             </SheetContent>

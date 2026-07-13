@@ -223,7 +223,7 @@ function ThreeDPhotoCarousel() {
             layoutId={`img-container-${activeImg}`}
             layout="position"
             onClick={handleClose}
-            className="fixed inset-0 bg-black bg-opacity-10 flex items-center justify-center z-50 m-5 md:m-36 lg:mx-[19rem] rounded-3xl"
+            className="fixed inset-0 bg-black bg-opacity-10 flex items-center justify-center z-50 m-5 md:m-36 lg:mx-76 rounded-3xl"
             style={{ willChange: "opacity" }}
             transition={transitionOverlay}
           >

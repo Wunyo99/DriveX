@@ -7,6 +7,7 @@ import WhyChooseUs from "../components/WhyChooseUs";
 import Services from "../components/Services";
 import Testimonials from "../components/Testimonials";
 import { motion } from "framer-motion";
+import FAQs from "../components/FAQs";
 const Home = () => {
   const carTypes = [
     {
@@ -33,9 +34,9 @@ const Home = () => {
       <Hero />
 
       <section>
-        <h1 className="text-center text-4xl mb-5 text-white font-bold">
+        {/* <h1 className="text-center text-4xl mb-5 text-white font-bold">
           Trusted <span className="text-lime-300">Brands</span>
-        </h1>
+        </h1> */}
         <div className="bg-green-950">
           <Brands />
         </div>
@@ -113,7 +114,7 @@ const Home = () => {
 
       <section className="py-10">
         <div>
-          <h1 className="text-6xl text-green-800 font-bold text-center">
+          <h1 className="text-4xl text-green-800 font-bold text-center">
             Trending <span className="text-lime-300">Cars</span>
           </h1>
         </div>
@@ -127,6 +128,7 @@ const Home = () => {
       <section className="flex flex-col items-center justify-center py-20 px-10">
         <Testimonials />
       </section>
+      <FAQs />
     </>
   );
 };
