@@ -1,6 +1,6 @@
 "use client";
 
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { CarFront, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import logo from "../assets/logo.png";
+import { useEffect, useState } from "react";
+
 const navLinks = [
   {
     name: "Home",
@@ -35,8 +37,25 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const showHeaderBg = !isHome || isScrolled;
   return (
-    <header className="sticky top-0 z-50 bg-green- backdrop-blur">
+    <header
+      className={`sticky top-0 z-50 bg-green-  ${showHeaderBg ? "bg-black shadow-2xl" : "transparent"}`}
+    >
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <div className="flex items-center gap-2">
           {/* <CarFront className="text-lime-300" size={35}/> */}

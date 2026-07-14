@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { motion, useReducedMotion } from "framer-motion";
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import { CarFront } from "lucide-react";
-
+import logo from "../assets/logo.png";
 import { Button } from "./ui/button";
 
 export function Footer({ className, ...props }) {
@@ -18,7 +18,6 @@ export function Footer({ className, ...props }) {
       <div className="fixed bottom-0 h-180 w-full">
         <div className="sticky top-[calc(100vh-720px)] h-full overflow-y-auto">
           <div className="relative flex min-h-full flex-col justify-end gap-10 border-t px-4 py-8 md:px-12">
-            {" "}
             <div
               aria-hidden
               className="absolute inset-0 isolate z-0 contain-strict"
@@ -33,8 +32,12 @@ export function Footer({ className, ...props }) {
               {" "}
               <AnimatedContainer className="w-full max-w-sm min-w-2xs space-y-4">
                 <div className="flex items-center gap-2">
-                  <CarFront className="size-8 text-lime-300" />
-                  <h4 className="text-2xl text-green-900 font-semibold">
+                  {/* <CarFront className="size-8 text-lime-300" /> */}
+                  <div className="rounded-full overflow-hidden w-14 h-14 flex items-center justify-center p-">
+                    {" "}
+                    <img src={logo} alt="" className="w-15 h-13.5 rounded-full " />
+                  </div>{" "}
+                  <h4 className="text-4xl text-green-900 font-semibold">
                     Drive<span className="text-lime-300">X</span>
                   </h4>
                 </div>
@@ -50,10 +53,10 @@ export function Footer({ className, ...props }) {
                     <Button
                       key={link.title}
                       size="icon"
-                      variant="outline"
+                      variant="default"
                       className="size-8"
                     >
-                      <link.icon className="size-4" />
+                      <link.icon className="size-4 text-lime-300" />
                     </Button>
                   ))}
                 </div>
