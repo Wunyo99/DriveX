@@ -79,7 +79,7 @@ export const featureSets = {
   ],
 };
 
-export const cars = [
+export const allCars = [
   // PETROL CARS
 
   {

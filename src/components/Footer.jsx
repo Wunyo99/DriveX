@@ -9,7 +9,7 @@ import { Button } from "./ui/button";
 export function Footer({ className, ...props }) {
   return (
     <footer
-      className={cn("relative h-180 w-full", className)}
+      className={cn("relative h-180 w-full bg-black", className)}
       style={{
         clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)",
       }}

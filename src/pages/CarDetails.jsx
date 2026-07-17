@@ -31,12 +31,12 @@ const CarDetails = () => {
       <div className="relative">
         <div className="bg-black aspect-squar p-8 rounded-3xl sticky top-32">
           <img
-            className="w-full h-120  object-contain"
+            className="w-full h-full  object-contai"
             src={carInfo.image}
             alt={carInfo.name}
           />
           {carInfo.featured && (
-            <div className="px-2 py-1 bg-blue-500 text-white font-medium text-sm rounded-full absolute top-7">
+            <div className="px-2 py-1 bg-green-900 text-white font-medium text-sm rounded-ful absolute top-7">
               featured
             </div>
           )}
@@ -87,12 +87,12 @@ const CarDetails = () => {
           </div>
         </div>
 
-        <div className="flex items-center gap-5 mt-7">
-          <button className="py-2 px-10 flex items-center gap-4 rounded-lg text-white bg-green-900">
+        <div className="flex flex-co items-center gap-5 mt-7">
+          <button className="py-2 px-5 lg:px-10 flex items-center gap-4 rounded-lg text-white bg-green-900">
             <Calendar size={15} />
             <span>Book Test Drive</span>
           </button>
-          <button className="py-2 px-10 rounded-lg text-white bg-green-900">
+          <button className="py-2 px-5 lg:px-10 rounded-lg text-white bg-green-900">
             Make Inquiry
           </button>
         </div>
