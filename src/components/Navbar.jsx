@@ -27,10 +27,6 @@ const navLinks = [
     path: "/services",
   },
   {
-    name: "About",
-    path: "/about",
-  },
-  {
     name: "Contact",
     path: "/contact",
   },
@@ -93,7 +89,7 @@ const Navbar = () => {
           </NavigationMenuList>
         </NavigationMenu>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        {/* <div className="hidden items-center gap-3 lg:flex">
           <Link className="bg-lime-300 py-1 px-4 rounded-md font-medium text-gray-800">
             Login
           </Link>
@@ -101,7 +97,7 @@ const Navbar = () => {
           <Link className="bg-lime-300 py-1 px-4 rounded-md font-medium text-gray-800">
             Sign Up
           </Link>
-        </div>
+        </div> */}
 
         <div className="lg:hidden">
           <Sheet>

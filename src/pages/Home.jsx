@@ -4,7 +4,6 @@ import { ArrowUpRight } from "lucide-react";
 import Brands from "../components/Brands";
 import { ThreeDPhotoCarousel } from "../components/ui/ThreeDCarousel";
 import WhyChooseUs from "../components/WhyChooseUs";
-import Services from "../components/Services";
 import Testimonials from "../components/Testimonials";
 import { motion } from "framer-motion";
 import FAQs from "../components/FAQs";
@@ -62,11 +61,10 @@ const Home = () => {
             className="flex flex-col lg:items-end items-center justify-end"
           >
             <p className="lg:w-100 text-center lg:text-end text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-              aut tempore sapiente nemo sunt vitae earum fuga reprehenderit
-              adipisci a!
+              Experience performance, comfort, and cutting-edge technology in a
+              vehicle designed to deliver confidence on every drive.
             </p>
-            <Link className="flex items-center gap-2 border rounded-full p-2 mt-5">
+            <Link to="/cars" className="flex items-center gap-2 border rounded-full p-2 mt-5">
               <span className="text-white uppercase text-sm">
                 View all vehicles
               </span>
@@ -121,10 +119,7 @@ const Home = () => {
         <ThreeDPhotoCarousel />
       </section>
 
-      {/* <section>
-      </section> */}
       <WhyChooseUs />
-      <Services />
       <section className="flex flex-col items-center justify-center py-20 px-10">
         <Testimonials />
       </section>

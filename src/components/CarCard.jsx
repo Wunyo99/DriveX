@@ -18,7 +18,6 @@ const CarCard = ({ car }) => {
         hover:shadow-xl
       "
     >
-      {/* Image */}
       <div className="relative h-60 overflow-hidden">
         <img
           src={car.image}
@@ -34,16 +33,11 @@ const CarCard = ({ car }) => {
           </span>
         )}
 
-        <button className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/90">
-          <Heart size={18} />
-        </button>
-
         <div className="absolute bottom-5 left-5 text-white">
           <h2 className="text-2xl font-bold">${car.price.toLocaleString()}</h2>
         </div>
       </div>
 
-      {/* Content */}
       <div className="p-6 bg-green-950">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white">
           {car.brand}
@@ -55,7 +49,6 @@ const CarCard = ({ car }) => {
           {car.description}
         </p>
 
-        {/* Specs */}
         <div className="mt-6 grid grid-cols-2 gap-4 text-sm text-lime-300">
           <div className="flex items-center gap-2">
             <Fuel size={16} />
