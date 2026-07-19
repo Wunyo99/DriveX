@@ -140,3 +140,19 @@ body{
   letter-spacing: -0.06em;
   text-transform: uppercase;
 } */
+
+/* Sonner Toast Custom Theme */
+[data-sonner-toast] {
+  background: #000000 !important;
+  color: #bef264 !important;
+  border: 1px solid #bef264 !important;
+}
+
+[data-sonner-toast] [data-title] {
+  color: #bef264 !important;
+  font-weight: 600;
+}
+
+[data-sonner-toast] [data-description] {
+  color: #d1d5db !important;
+}

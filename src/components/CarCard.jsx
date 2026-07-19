@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Fuel, Gauge, Settings2, MapPin, Heart } from "lucide-react";
+import { Fuel, Gauge, Settings2, Heart } from "lucide-react";
+import { LiaHorseHeadSolid } from "react-icons/lia";
 
 const CarCard = ({ car }) => {
   return (
@@ -66,8 +67,8 @@ const CarCard = ({ car }) => {
           </div>
 
           <div className="flex items-center gap-2">
-            <MapPin size={16} />
-            <span>{car.location}</span>
+            <LiaHorseHeadSolid size={16} />
+            <span>{car.horsepower}</span>
           </div>
         </div>
 

@@ -15,19 +15,19 @@ const DetailTabs = () => {
     <Tabs defaultValue="overview" className="md:w-2xl lg:w-5xl">
       <TabsList className="bg-black">
         <TabsTrigger
-          className="text-lime-300 hover:text-white data-active:bg-green-900 data-active:text-white"
+          className="text-lime-300 hover:text-white data-active:bg-green-900 data-active:text-white cursor-pointer"
           value="overview"
         >
           Overview
         </TabsTrigger>
         <TabsTrigger
-          className="text-lime-300 hover:text-white data-active:bg-green-900 data-active:text-white"
+          className="text-lime-300 hover:text-white data-active:bg-green-900 data-active:text-white cursor-pointer"
           value="specifications"
         >
           Specifications
         </TabsTrigger>
         <TabsTrigger
-          className="text-lime-300 hover:text-white data-active:bg-green-900 data-active:text-white"
+          className="text-lime-300 hover:text-white data-active:bg-green-900 data-active:text-white cursor-pointer"
           value="features"
         >
           Features

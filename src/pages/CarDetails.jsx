@@ -27,11 +27,21 @@ const CarDetails = ({ car }) => {
   const { carInfo, isFound } = useCar();
 
   if (!isFound) {
-    return <div className="h-scree py-24 flex flex-col items-center justify-center">
-      <TriangleAlertIcon size={50} className="text-lime-300 mb-5"/>
-      <h1 className="text-4xl font-medium text-white italic">Car not Found!</h1>;
-      <Link to="/" className="bg-green-900 py-2 px-5 rounded-full text-white font-medium hover:bg-lime-300 hover:text-black transition-colors">Back to home</Link>
-    </div>;
+    return (
+      <div className="h-scree py-24 flex flex-col items-center justify-center">
+        <TriangleAlertIcon size={50} className="text-lime-300 mb-5" />
+        <h1 className="text-4xl font-medium text-white italic">
+          Car not Found!
+        </h1>
+        ;
+        <Link
+          to="/"
+          className="bg-green-900 py-2 px-5 rounded-full text-white font-medium hover:bg-lime-300 hover:text-black transition-colors"
+        >
+          Back to home
+        </Link>
+      </div>
+    );
   }
 
   const formatPrice = (price) =>

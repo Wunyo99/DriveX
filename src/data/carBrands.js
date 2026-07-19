@@ -16,10 +16,6 @@
       logo: "https://cdn.simpleicons.org/bmw",
     },
     {
-      name: "Mercedes-Benz",
-      logo: "https://cdn.simpleicons.org/mercedes",
-    },
-    {
       name: "Audi",
       logo: "https://cdn.simpleicons.org/audi",
     },

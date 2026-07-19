@@ -82,11 +82,11 @@ const Contact = () => {
         </div>
       </section>
 
-
       <section
         className="
           mx-auto
           grid
+          grid-cols-2
           max-w-6xl
           gap-6
           px-6
@@ -103,10 +103,10 @@ const Contact = () => {
         <ContactCard
           icon={<Phone />}
           title="Call Us"
-          text="(+233) 245 494 534"
+          text="(+233)245494534"
         />
 
-        <ContactCard icon={<Mail />} title="Email" text="hello@drivex.com" />
+        <ContactCard icon={<Mail />} title="Email" text="drivex@gmail.com" />
 
         <ContactCard
           icon={<Clock />}
@@ -341,7 +341,7 @@ const Contact = () => {
         transition-all
         hover:bg-lime-300
         hover:shadow-lg
-        hover:shadow-lime-400/20
+        hover:shadow-lime-400/20 cursor-pointer
       "
               >
                 Send Message

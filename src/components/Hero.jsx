@@ -39,7 +39,7 @@ const Hero = () => {
 
             <div className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-5">
               <Link
-                to="/jobs"
+                to="/cars"
                 className="flex items-center gap-2 text-black bg-lime-300 py-2 px-6 rounded-full font-medium hover:bg-yellow-200 duration-300"
               >
                 <span>EXPLORE CARS</span>

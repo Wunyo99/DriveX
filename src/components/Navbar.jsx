@@ -37,6 +37,7 @@ const Navbar = () => {
   const isHome = location.pathname === "/";
 
   const [isScrolled, setIsScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -100,17 +101,18 @@ const Navbar = () => {
         </div> */}
 
         <div className="lg:hidden">
-          <Sheet>
+          <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button variant="default" size="lg">
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
 
-            <SheetContent side="right" className="w-72">
+            <SheetContent side="right" className="w-72 h-fit">
               <div className="mt-10 flex flex-col gap-2">
                 {navLinks.map((link) => (
                   <NavLink
+                    onClick={() => setOpen(false)}
                     key={link.name}
                     to={link.path}
                     className={({ isActive }) =>
@@ -122,16 +124,6 @@ const Navbar = () => {
                     {link.name}
                   </NavLink>
                 ))}
-
-                <div className=" items-center gap-3 flex">
-                  <Link className="bg-lime-300 py-2 px-4 rounded-md font-medium text-gray-800">
-                    Login
-                  </Link>
-
-                  <Link className="bg-lime-300 py-2 px-4 rounded-md font-medium text-gray-800">
-                    Sign Up
-                  </Link>
-                </div>
               </div>
             </SheetContent>
           </Sheet>

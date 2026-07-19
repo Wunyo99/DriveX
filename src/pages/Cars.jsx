@@ -3,6 +3,7 @@ import CarCard from "../components/CarCard";
 import { Search, ChevronDown } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
 import { useMemo, useState } from "react";
+import { div } from "framer-motion/client";
 
 const categories = ["All", "Petrol", "Diesel", "Electric", "Hybrid"];
 
@@ -25,6 +26,7 @@ const Cars = () => {
 
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
+
       filtered = filtered.filter(
         (c) =>
           c.name.toLowerCase().includes(query) ||
@@ -145,11 +147,19 @@ const Cars = () => {
         </aside>
         <div className="col-span-5">
           {" "}
-          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-            {filteredCars.map((car) => (
-              <CarCard key={car.id} car={car} />
-            ))}
-          </div>
+          {filteredCars.length === 0 ? (
+            <div className="flex items-center justify-center h-80">
+              <p className="text-2xl font-semibold text-gray-400">
+                No cars found.
+              </p>
+            </div>
+          ) : (
+            <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+              {filteredCars.map((car) => (
+                <CarCard key={car.id} car={car} />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </section>
