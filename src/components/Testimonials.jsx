@@ -32,7 +32,7 @@ const Testimonials = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
       className="mb-8">
-        <h1 className="capitalize text-center text-4xl font-medium text-white">
+        <h1 className="capitalize text-center text-4xl font-semibold text-white">
           What our <span className="text-lime-300">customers</span> say
         </h1>
       </motion.div>

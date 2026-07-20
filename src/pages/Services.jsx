@@ -48,58 +48,124 @@ const Services = () => {
     },
   ];
   return (
-    <section className="py-24 bg-blac">
-      <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="mb-14 text-center"
+    <>
+      <motion.section
+                  initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+        className="
+          relative
+          flex
+          min-h-[70vh]
+          items-center
+          overflow-hidden
+          bg-black
+        "
+      >
+        <img
+          src="https://images.unsplash.com/photo-1503376780353-7e6692767b70"
+          alt="Luxury car"
+          className="
+            absolute
+            inset-0
+            h-full
+            w-full
+            object-cover
+            opacity-50
+          "
+        />
+
+        <div
+          className="
+            absolute
+            inset-0
+            bg-linear-to-r
+            from-black
+            to-black/30
+          "
+        />
+
+        <div
+          className="
+            relative
+            mx-auto
+            max-w-7xl
+            px-6
+            text-white
+          "
         >
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-green-600">
+          <p
+            className="
+              uppercase
+              tracking-[0.4em]
+              text-lime-400
+            "
+          >
             What We Offer
           </p>
 
-          <h2 className="mt-4 text-4xl font-bold text-white">
-            <span className="text-green-900">Premium</span> Automotive{" "}
+          <h1
+            className="
+              mt-5
+              max-w-3xl
+              text-5xl
+              font-black
+              md:text-6xl
+            "
+          >
+            Premium Automotive{" "}
             <span className="text-lime-300">Services</span>
-          </h2>
+          </h1>
 
-          <p className="mx-auto mt-5 max-w-2xl text-white">
-            From finding your dream car to financing, delivery, and after-sales
-            support, DriveX provides everything you need in one place.
+          <p
+            className="
+              mt-6
+              max-w-xl
+              text-lg
+              text-white/70
+            "
+          >
+              From finding your dream car to financing, delivery, and
+              after-sales support, DriveX provides everything you need in one
+              place.
           </p>
-        </motion.div>
-
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {services.map((service) => {
-            const Icon = service.icon;
-
-            return (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                key={service.title}
-                className="group rounded-3xl hover:border p-8 transition hover:-translate-y-1 hover:border-lime-200"
-              >
-                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-green-950 text-lime-300">
-                  <Icon size={28} />
-                </div>
-
-                <h3 className="mb-4 text-xl font-semibold text-lime-300">
-                  {service.title}
-                </h3>
-
-                <p className="leading-7 text-white">{service.description}</p>
-              </motion.div>
-            );
-          })}
         </div>
-      </div>
-    </section>
+      </motion.section>
+
+      <section className="py-24 bg-blac">
+        <div className="container mx-auto px-6">
+
+
+          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+            {services.map((service) => {
+              const Icon = service.icon;
+
+              return (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  key={service.title}
+                  className="group rounded-3xl hover:border p-8 transition hover:-translate-y-1 hover:border-lime-200"
+                >
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-green-950 text-lime-300">
+                    <Icon size={28} />
+                  </div>
+
+                  <h3 className="mb-4 text-xl font-semibold text-lime-300">
+                    {service.title}
+                  </h3>
+
+                  <p className="leading-7 text-white">{service.description}</p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

@@ -46,11 +46,10 @@ const FAQs = () => {
         backgroundImage: `url("https://images2.alphacoders.com/479/479385.jpg")`,
       }}
     >
-      {/* Dark overlay */}
       <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/70 to-black/90"></div>{" "}
       <div className="relative container z-20 mx-auto px-6">
         <div className="mb-16 text-center">
-          <h2 className="mt-4 text-4xl font-bold">
+          <h2 className="mt-4 text-4xl font-semibold">
             Frequently <span className="text-lime-300">Asked</span> Questions
           </h2>
 

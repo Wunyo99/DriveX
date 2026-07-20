@@ -45,7 +45,7 @@ const Home = () => {
             </p>
             <Link
               to="/cars"
-              className="flex items-center gap-2 border rounded-full p-2 mt-5"
+              className="flex items-center gap-2 border hover:border-lime-300 rounded-full p-2 mt-5"
             >
               <span className="text-white uppercase text-sm">
                 View all vehicles
@@ -70,7 +70,7 @@ const Home = () => {
 
       <section className="py-10">
         <div>
-          <h1 className="text-4xl text-green-800 font-bold text-center">
+          <h1 className="text-4xl text-white font-semibold text-center">
             Trending <span className="text-lime-300">Cars</span>
           </h1>
         </div>
