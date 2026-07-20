@@ -65,7 +65,7 @@ const Contact = () => {
               md:text-7xl
             "
           >
-            Let's Find Your Perfect Vehicle
+            Let's Find Your <span className="text-lime-300">Perfect Vehicle</span>
           </h1>
 
           <p
