@@ -97,7 +97,7 @@ const Contact = () => {
         <ContactCard
           icon={<MapPin />}
           title="Visit Us"
-          text=" Eas Legon Accra, Ghana"
+          text=" East Legon Accra, Ghana"
         />
 
         <ContactCard
