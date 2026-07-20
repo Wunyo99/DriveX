@@ -31,7 +31,7 @@ const Contact = () => {
           className="
             absolute
             inset-0
-            bg-gradient-to-r
+            bg-linear-to-r
             from-black
             to-black/30
           "
