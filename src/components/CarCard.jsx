@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Fuel, Gauge, Settings2, Heart } from "lucide-react";
 import { LiaHorseHeadSolid } from "react-icons/lia";
 
-const CarCard = ({ car }) => {
+const CarCard = ({ car,}) => {
   return (
     <article
       className="
