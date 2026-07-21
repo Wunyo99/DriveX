@@ -20,7 +20,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-center hero-title text-3xl md:text-7xl text-white font-bold tracking-wider mt-4"
+            className="text-center hero-title text-8xl text-white font-bold tracking-wider mt-4"
           >
             <span className="text-green-900">DRIVE</span> YOUR{" "}
             <span className="text-lime-300">WAY</span>
