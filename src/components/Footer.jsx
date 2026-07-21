@@ -98,7 +98,7 @@ export function Footer({ className, ...props }) {
             <div className="text-gray-400 flex flex-col items-center justify-between gap-2 border-t pt-6 text-sm md:flex-row">
               {" "}
               <p>© 2025 DriveX. All rights reserved.</p>
-              <p>Luxury Automotive</p>
+              <p>DriveX Automotive</p>
             </div>
           </div>
         </div>
