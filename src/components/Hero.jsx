@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <>
-      {/* <section className="h-screen flex items-cente justify-center md:justify-start overflow-hidden" > */}
       <section className="h-screen flex items-cente md:block justify-center ">
         <div
           className="absolute inset-0 bg-cover lg:bg-center bg-no-repeat"
@@ -20,7 +19,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-center hero-title text-8xl text-white font-bold tracking-wider mt-4"
+            className="text-center hero-title text-6xl text-white font-bold tracking-wider mt-4"
           >
             <span className="text-green-900">DRIVE</span> YOUR{" "}
             <span className="text-lime-300">WAY</span>

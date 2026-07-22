@@ -143,7 +143,7 @@ const CarDetails = ({ car }) => {
           </div>
         </div>
       </div>
-      <div className="mx-aut">
+      <div>
         <DetailTabs />
       </div>
     </section>
